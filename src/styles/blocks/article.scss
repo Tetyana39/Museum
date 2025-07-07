@@ -18,7 +18,12 @@
     }
 
     &--events {
+      height: 359px;
+      width: 280px;
+
       @include onTablet {
+        height: 422px;
+        width: 330px;
         margin-inline: 0;
       }
 

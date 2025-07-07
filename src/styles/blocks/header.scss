@@ -3,7 +3,7 @@
   color: $header-menu-color;
   padding-inline: 20px;
 
-  &__container {
+  & > .container {
     position: relative;
     max-width: 1280px;
   }
@@ -98,11 +98,12 @@
 
     @include onDesktop {
       position: absolute;
+      background-position: right center;
+      bottom: 0;
       right: 0;
       height: 663px;
       width: 625px;
       top: auto;
-      bottom: 0;
     }
 
     &__time-line {
