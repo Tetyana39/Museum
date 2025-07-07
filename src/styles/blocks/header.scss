@@ -1,4 +1,11 @@
 .header {
+  background-image: url(../images/header-bg-mobile.png);
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-self: center;
+
   background-color: $bg-color;
   color: $header-menu-color;
   padding-inline: 20px;
@@ -83,13 +90,7 @@
 
   &__background {
     grid-column: 1/-1;
-    background-image: url(../images/header-bg-mobile.png);
-    height: 273px;
-    width: 245px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    justify-self: center;
+    height: 100vh;
 
     @include onTablet {
       height: 494px;
