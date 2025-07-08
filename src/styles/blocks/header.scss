@@ -1,22 +1,42 @@
 .header {
-  background-image: url(../images/header-bg-mobile.png);
-  
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    justify-self: center;
-
   background-color: $bg-color;
   color: $header-menu-color;
   padding-inline: 20px;
+
+  &__content {
+    @include pageGrid;
+
+    @include onDesktop {
+      position: relative;
+    }
+  }
 
   & > .container {
     position: relative;
     max-width: 1280px;
   }
 
-  &__content {
-    @include pageGrid;
+  &__image {
+     grid-column: 1/-1;
+    height: 273px;
+    width: 245px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-self: center;
+
+    @include onTablet {
+      height: 494px;
+      width: 443px;
+    }
+
+    @include onDesktop {
+      position: absolute;
+      height: 663px;
+      width: 625px;
+      bottom: 0;
+      right: 0;
+    }
   }
 
   &__subtitle {
@@ -48,6 +68,21 @@
 
     @include onDesktop {
       margin-top: 90px;
+    }
+  }
+
+   &__time-line {
+    display: none;
+
+    @include onDesktop {
+      display: flex;
+      position: relative;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 125%;
+      grid-column: 1/6;
+      padding-bottom: 50px;
     }
   }
 
@@ -87,39 +122,5 @@
       margin-bottom: 135px;
     }
   }
-
-  &__background {
-    grid-column: 1/-1;
-    height: 100vh;
-
-    @include onTablet {
-      height: 494px;
-      width: 443px;
-    }
-
-    @include onDesktop {
-      position: absolute;
-      background-position: right center;
-      bottom: 0;
-      right: 0;
-      height: 663px;
-      width: 625px;
-      top: auto;
-    }
-
-    &__time-line {
-      display: none;
-
-      @include onDesktop {
-        display: flex;
-        position: relative;
-        font-family: 'Playfair Display', serif;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 125%;
-        grid-column: 1/6;
-        padding-bottom: 50px;
-      }
-    }
-  }
 }
+
